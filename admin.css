@@ -1,0 +1,20 @@
+#body{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 30vh 70vh;
+    grid-template-areas: "napis wykres "
+    "lista lista";
+    margin: 0px;
+}
+#napis{
+    grid-area: napis;
+    background-color: rgb(37, 37, 37);
+}
+#lista{
+    grid-area: lista;
+    background-color: rgb(43, 43, 43);
+}
+#wykres{
+    grid-area: wykres;
+    background-color: rgb(61, 61, 61);
+}

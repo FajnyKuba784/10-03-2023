@@ -17,23 +17,23 @@ var con = mysql.createConnection({
 
 con.connect(function(err){
 
-    if(err) console.log(err)   
+    if(err) res.send(err)   
     console.log("Połączono")
 
 })
 
 app.get("/add/:kandydat/:pesel",function(req,res){
 
-    
+    const kandydat = req.params.kandydat
     const pesel = req.params.pesel
 
-    const sql = `INSERT INTO wybory (kandydat,PESEL) VALUES ('1','${pesel}')`
+    const sql = `INSERT INTO wybory (kandydat,PESEL) VALUES ('${kandydat}','${pesel}')`
 
     con.query(sql,function(err,result,fields){
 
         if(err){
-            console.log(err)
-            console.log("Nie dodano")
+            res.send(err)
+            res.send("Nie dodano")
         }
         console.log("Dodano")
 
@@ -42,45 +42,6 @@ app.get("/add/:kandydat/:pesel",function(req,res){
 
 })
 
-app.get("/add/:kandydat/:pesel",function(req,res){
-
-    
-    const pesel = req.params.pesel
-
-    const sql = `INSERT INTO wybory (kandydat,PESEL) VALUES ('2','${pesel}')`
-
-    con.query(sql,function(err,result,fields){
-
-        if(err){
-            console.log(err)
-            console.log("Nie dodano")
-        }
-        console.log("Dodano")
-
-    })
-
-
-})
-
-app.get("/add/:kandydat/:pesel",function(req,res){
-
-    
-    const pesel = req.params.pesel
-
-    const sql = `INSERT INTO wybory (kandydat,PESEL) VALUES ('3','${pesel}')`
-
-    con.query(sql,function(err,result,fields){
-
-        if(err){
-            console.log(err)
-            console.log("Nie dodano")
-        }
-        console.log("Dodano")
-
-    })
-
-
-})
 
 app.get("/select",function(req,res){
 
@@ -89,7 +50,7 @@ app.get("/select",function(req,res){
     con.query(sql,function(err,result,fields){
 
         if(err){
-            console.log(err)
+            res.send(err)
 
         }
         res.send(result)
@@ -97,6 +58,7 @@ app.get("/select",function(req,res){
     })
 
 })
+
 
 
 

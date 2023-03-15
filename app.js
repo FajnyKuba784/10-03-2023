@@ -21,11 +21,32 @@ async function getData(){
     }
     console.log(k1,k2,k3)
 
+    
 }
+getData()
 
 function wysylanie1(){
 
-    const data = fetch("http://localhost:3000/")
+    const pesel = document.getElementById("pesel").value
 
+    const data = fetch("http://localhost:3000/add/Obama1/"+pesel)
 
+    document.getElementById("div2").innerHTML = "<h1>Dziękujemy za oddanie głosu</h1>"
 }
+function wysylanie2(){
+
+    const pesel = document.getElementById("pesel").value
+
+    const data = fetch("http://localhost:3000/add/Obama2/"+pesel)
+
+    document.getElementById("div2").innerHTML = "<h1>Dziękujemy za oddanie głosu</h1>"
+}
+function wysylanie3(){
+
+    const pesel = document.getElementById("pesel").value
+
+    const data = fetch("http://localhost:3000/add/Obama3/"+pesel)
+
+    document.getElementById("div2").innerHTML = "<h1>Dziękujemy za oddanie głosu</h1>"
+}
+

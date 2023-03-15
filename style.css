@@ -1,0 +1,46 @@
+#body{
+
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 100% 100%;
+    grid-template-rows: 30vh 70vh;
+    grid-template-areas:
+    "div1"
+    "div2";
+}
+
+#div1{
+    grid-area: div1;
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+#div2{
+grid-area: div2;
+background-color: rgb(43, 43, 43);
+display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#pesel{
+    height: 15px;
+    width: 100px;
+
+}
+.b{
+    background-color: rgb(61, 61, 61);
+    height: 400px;
+    width: 300px;
+    padding: 20px;
+    border-radius: 25px;
+}
