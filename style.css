@@ -43,4 +43,13 @@ display: flex;
     width: 300px;
     padding: 20px;
     border-radius: 25px;
+    color: aliceblue;
+    font-family: monospace;
+    font-size: 20px;
+}
+.napis{
+    font-family: monospace;
+    color: aliceblue;
+    font-size: 40px;
+
 }

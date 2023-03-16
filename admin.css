@@ -13,8 +13,24 @@
 #lista{
     grid-area: lista;
     background-color: rgb(43, 43, 43);
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
 }
 #wykres{
     grid-area: wykres;
     background-color: rgb(61, 61, 61);
+}
+.diva{
+    background-color: rgb(99, 99, 99);
+    height: 100px;
+    width: 200px;
+    justify-content: center;
+    justify-items: center;
+    border: 5px;
+    border-color: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 25px;
 }
