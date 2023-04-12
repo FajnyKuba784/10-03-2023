@@ -59,7 +59,40 @@ app.get("/select",function(req,res){
 
 })
 
+app.get("/select/kandydat",function(req,res){
 
+    const sql = `SELECT * FROM kandydaci`
+    
+    con.query(sql,function(err,result,fields){
+
+        if(err){
+            res.send(err)
+
+        }
+        res.send(result)
+        console.log(fields)
+    })
+
+})
+
+app.get("/ad/kandydaci/:nazwa",function(req,res){
+
+    const nazwa = req.params.nazwa
+
+    const sql = `INSERT INTO kandydaci (nazwa) VALUES ('${nazwa}')`
+    
+    con.query(sql,function(err,result,fields){
+
+        if(err){
+            res.send(err)
+
+        }
+        res.send(result)
+        console.log(fields)
+    })
+
+
+})
 
 
 

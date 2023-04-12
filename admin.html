@@ -11,9 +11,18 @@
 <body id="body">
     <div id="napis">
         <h1>Admin</h1><br>
-        <h2 id="lider">Aktualny lider : </h2>
+        <h2 id="lider">Aktualny lider : </h2> <br>
+        <button onclick="tworz()">Dodaj Kandydata</button>
+        <input id="nazwak" type="text">
     </div>
-    <div id="lista"></div>
+    <div id="lista">
+        <table id="tabela">
+            <tr>
+                <th>Kandydat</th>
+                <th>Pesel</th>
+            </tr>
+        </table>
+    </div>
     <div id="wykres">
         <canvas id="myChart" width="width:400px;,height:1100px" ></canvas>
     </div>
